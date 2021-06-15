@@ -3,19 +3,26 @@
 自己使用的工具jar
 
 ```
-<repositories>
-    <repository>
-        <id>mqh-util</id>
-        <url>https://github.com/vanishma/util/repo</url>
-    </repository>
-</repositories>
-
-
-<dependency>
-    <groupId>com.maqh</groupId>
-    <artifactId>util</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
+ <repository>
+            <id>vanish-public-snapshots</id>
+            <url>https://jitpack.io</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        
+        <dependency>
+            <groupId>com.github.vanishma</groupId>
+            <artifactId>utils</artifactId>
+            <version>main-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-beans</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 ```
 
 对象转换工具 需要用到 org.springframework.beans.BeanUtils 包 如项目中没有引用不能能使用 或者单独引用
