@@ -1,4 +1,4 @@
-package java.maqh.utils.date;
+package com.maqh.utils.date;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

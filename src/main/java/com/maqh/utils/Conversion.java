@@ -1,4 +1,4 @@
-package java.maqh.utils;
+package com.maqh.utils;
 import org.springframework.beans.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;
