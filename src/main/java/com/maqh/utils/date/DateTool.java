@@ -34,7 +34,7 @@ public class DateTool {
 
     /**
      * 获取去年
-     * @return {@link int}
+     * @return 去年
      */
     public static int getLastYear() {
         LocalDate localDate = LocalDate.now();
@@ -105,16 +105,30 @@ public class DateTool {
         return list;
     }
 
+    /**
+     * 获取当前日期的格式化后的时间
+     * @return yyyy-MM-dd
+     */
     public static String getDate() {
         LocalDate localDate = LocalDate.now();
         return localDate.format(FMT);
     }
 
+    /**
+     *
+     * @param date 日期对象
+     * @param fmt  格式化字符串
+     * @return 格式化后的时间
+     */
     public static String getDateFmt(Date date, String fmt) {
         DateFormat bf = new SimpleDateFormat(fmt);
         return bf.format(date);
     }
 
+    /**
+     * 获取当前时间的前5分钟
+     * @return 当前时间前5分钟
+     */
     public static Date getTime() {
         Calendar c = Calendar.getInstance();
         c.add(Calendar.MINUTE, -5);
