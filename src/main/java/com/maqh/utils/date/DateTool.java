@@ -28,8 +28,15 @@ public class DateTool {
      * @return 当前年
      */
     public static int getYear() {
-        LocalDate localDate = LocalDate.now();
-        return localDate.getYear();
+        return getLocalDate().getYear();
+    }
+
+    /**
+     * 获取当前时间日期对象
+     * @return 当前时间
+     */
+    public static LocalDate getLocalDate(){
+        return LocalDate.now();
     }
 
     /**
@@ -37,8 +44,7 @@ public class DateTool {
      * @return 去年
      */
     public static int getLastYear() {
-        LocalDate localDate = LocalDate.now();
-        return localDate.getYear() - 1;
+        return getLocalDate().getYear() - 1;
     }
 
     /**
@@ -47,8 +53,7 @@ public class DateTool {
      * @return 当前月
      */
     public static int getMonth() {
-        LocalDate localDate = LocalDate.now();
-        return localDate.getMonthValue();
+        return getLocalDate().getMonthValue();
     }
 
     /**
@@ -57,8 +62,7 @@ public class DateTool {
      * @return 当前天
      */
     public static int getDay() {
-        LocalDate localDate = LocalDate.now();
-        return localDate.getDayOfMonth();
+        return getLocalDate().getDayOfMonth();
     }
 
     /**
@@ -67,26 +71,13 @@ public class DateTool {
      * @return 当前月天数
      */
     public static int lastDay() {
-        LocalDate localDate = LocalDate.now();
-        LocalDate with = localDate.with(TemporalAdjusters.lastDayOfMonth());
+        LocalDate with = getLocalDate().with(TemporalAdjusters.lastDayOfMonth());
         return with.getDayOfMonth();
     }
 
     /**
-     * 获取项目年
-     * @return {@link List< Integer>}
-     */
-    public static List<Integer> getYearList() {
-        List<Integer> list = new ArrayList<>();
-        for (int i = 2020; i <= getYear(); i++) {
-            list.add(i);
-        }
-        return list;
-    }
-
-    /**
      * 获取月度list
-     * @return {@link List< String>}
+     * @return 12个月的集合
      */
     public static List<String> getMonthList(){
         List<String> list = new ArrayList<>();
@@ -110,8 +101,7 @@ public class DateTool {
      * @return yyyy-MM-dd
      */
     public static String getDate() {
-        LocalDate localDate = LocalDate.now();
-        return localDate.format(FMT);
+        return getLocalDate().format(FMT);
     }
 
     /**
