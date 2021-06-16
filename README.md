@@ -1,6 +1,6 @@
 # util
 
-自己使用的工具jar
+工具类maven 引用方法
 
 ```
  <repository>
