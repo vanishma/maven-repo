@@ -1,4 +1,4 @@
-package com.maqh.utils;
+package com.maqh.utils.bean;
 import org.springframework.beans.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -35,7 +35,7 @@ public class Conversion {
                     B be = b.getDeclaredConstructor().newInstance();
                     BeanUtils.copyProperties(t1, be);
                     result.add(be);
-                } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+                } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException ignored) {
                 }
             }
         }
@@ -59,7 +59,7 @@ public class Conversion {
                 B be = b.getDeclaredConstructor().newInstance();
                 BeanUtils.copyProperties(t, be);
                 result = be;
-            } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+            } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException ignored) {
             }
         }
         return result;

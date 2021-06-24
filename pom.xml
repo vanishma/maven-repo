@@ -7,13 +7,24 @@
     <groupId>com.maqh</groupId>
     <artifactId>util</artifactId>
     <version>1.1-SNAPSHOT</version>
-
-    <properties>
-        <maven.compiler.target>8</maven.compiler.target>
-        <maven.compiler.source>8</maven.compiler.source>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
+    <name>util</name>
+    <description>util</description>
+    <url>https://github.com/vanishma/utils</url>
+    <organization>
+        <name>vanish</name>
+        <url>https://vanishma.github.io</url>
+    </organization>
+    <developers>
+        <developer>
+            <id>vanish</id>
+            <name>vanish</name>
+            <email>vanishxiaoma@outlook.com</email>
+        </developer>
+    </developers>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/vanishma/utils/issues</url>
+    </issueManagement>
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
