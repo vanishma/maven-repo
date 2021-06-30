@@ -46,7 +46,7 @@ public class JsonBean<T> implements Serializable {
         return new JsonBean<>(o);
     }
 
-    public static <T> JsonBean<T> success(ResultEnum result) {
+    public static <T> JsonBean<T> success(Result result) {
         return new JsonBean<>(result.getCode(), result.getMsg());
     }
 
@@ -54,11 +54,11 @@ public class JsonBean<T> implements Serializable {
         return new JsonBean<>(ResultEnum.SAVE_ERROR.getCode(), ResultEnum.SAVE_ERROR.getMsg());
     }
 
-    public static <T> JsonBean<T> err(ResultEnum result, T o) {
+    public static <T> JsonBean<T> err(Result result, T o) {
         return new JsonBean<>(result.getCode(), result.getMsg(), o);
     }
 
-    public static <T> JsonBean<T> err(ResultEnum result) {
+    public static <T> JsonBean<T> err(Result result) {
         return new JsonBean<>(result.getCode(), result.getMsg());
     }
 }

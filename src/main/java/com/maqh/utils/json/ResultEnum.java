@@ -9,7 +9,7 @@ package com.maqh.utils.json;
  * @version 1.0
  * @since 2021-05-25
  */
-public enum ResultEnum {
+public enum ResultEnum implements Result {
     //状态码对应信息
     SUCCESS(200, "成功"),
     NOT_AUTHORITY(401, "非法访问"),
@@ -37,10 +37,12 @@ public enum ResultEnum {
         this.msg = msg;
     }
 
+    @Override
     public Integer getCode() {
         return code;
     }
 
+    @Override
     public String getMsg() {
         return msg;
     }
