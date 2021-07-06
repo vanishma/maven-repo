@@ -6,10 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>
  * 工具类
  * List中的对象转换 返回list
- * </p>
  * @author maqh
  * @since 2019/9/9 10:41
  */
