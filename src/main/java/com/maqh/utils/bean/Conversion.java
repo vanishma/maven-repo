@@ -10,11 +10,14 @@ import java.util.List;
  * 工具类
  * List中的对象转换 返回list
  * </p>
+ *
  * @author maqh
  * @since 2019/9/9 10:41
  */
-public class Conversion {
-    private Conversion(){}
+public class Conversion {1
+
+    private Conversion() {
+    }
 
     /**
      * list的属性对象转换
