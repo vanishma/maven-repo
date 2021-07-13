@@ -8,6 +8,13 @@ package com.maqh.utils.str;
  * @date 2021-07-12
  */
 public class StringUtils {
+
+    /**
+     * 反转字符串
+     *
+     * @param str 字符串
+     * @return 反转后字符串
+     */
     public static String reversel(String str) {
         return new StringBuilder(str).reverse().toString();
     }
